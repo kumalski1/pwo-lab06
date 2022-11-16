@@ -6,20 +6,35 @@ package pwolab.lab03.seq;
 
  import java.math.BigDecimal;
 
- public class TribonacciGenerator extends
+/**
+ *
+ * @author Michal
+ * @version 1.0.0
+ */
+public class TribonacciGenerator extends
  FibonacciGenerator {
 
- public TribonacciGenerator() {
+    /**
+     * Klasa obliczajaca ciag tribonacciego, dziedziczy po klasie FibonacciGenerator
+     */
+    public TribonacciGenerator() {
  f_3 = new BigDecimal(0);
  }
 
- @Override
+    /**
+     * resetuje zmienne odpowiadajace za obliczanie kolejnych liczb ciagu tribonacciego
+     */
+    @Override
  public void reset() {
  super.reset();
  f_3 = new BigDecimal(0);
  }
 
- @Override
+    /**
+     * 
+     * @return zwraca nastepna liczbe ciagu tribonacciego
+     */
+    @Override
  public BigDecimal nextTerm() {
  if (lastIndex > 2) {
  current = f_1.add(f_2).add(f_3);

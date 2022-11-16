@@ -8,10 +8,16 @@ import pwolab.lab03.utils.SequenceTools;
 
 /**
  *
- * @author student
+ * @author Michal
+ * @version 1.0.0
  */
 public class SeqToOutApp extends SeqToFileApp {
 
+    /**
+     * Metoda getArgs pobiera argumenty
+     * @param args
+     * @return
+     */
     @Override
     protected boolean getArgs(String[] args) {
         if (super.getArgs(args)) {
@@ -21,12 +27,20 @@ public class SeqToOutApp extends SeqToFileApp {
 
     }
 
+    /**
+     * Metoda writeSeq wywołuje sekwencje
+     * @return
+     */
     @Override
     protected boolean writeSeq() {
         System.out.println(SequenceTools.getTermsAsColumn(seqType.getGenerator(), from, to));
         return true;
     }
 
+    /**
+     * Metoda run uruchamia program
+     * @param args
+     */
     @Override
     public void run(String[] args) {
         System.out.println("Sequence to terminal CLI app");
